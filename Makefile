@@ -12,3 +12,6 @@ exercise2make: exercise2.cpp
 day4make: day4.cpp
 	$(CC) -o day4 day4.cpp
 
+day5make: day5.cpp
+	$(CC) -o day5 day5.cpp
+
