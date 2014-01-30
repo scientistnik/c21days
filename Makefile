@@ -1,5 +1,5 @@
 CC=g++
-SOURCES=day8.cpp
+SOURCES=day9.cpp
 NAME=$(SOURCES)
 
 all:
