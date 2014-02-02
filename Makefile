@@ -1,8 +1,9 @@
 CC=g++
-SOURCES=day10.cpp
+SOURCES=day11.cpp
 NAME=$(SOURCES)
 
 all:
+	clear
 	$(CC) $(SOURCES) -o $(NAME:.cpp=) 
 
 hellomake: hello.cpp
@@ -21,4 +22,4 @@ day5make: day5.cpp
 	$(CC) -o day5 day5.cpp
 
 clean:
-	rm -rf *~ day? *.o
+	rm -rf *~ day?? *.o
