@@ -2,21 +2,54 @@
 
 using namespace std;
 
-class Rocket
-{};
-
-class Airplane
+class Vehicle
 {
+	public:
+		virtual void Move()=0;
+		virtual void Stop()=0;
 };
 
-class Jatplane : public Rocket, public Airplane
-{};
+void Vehicle::Move()
+{
+	cout<< "Move vehicle...";
+};
 
-class _747: public Jatplane
-{};
+class Car : public Vehicle
+{
+	public:
+		void Move(){ Vehicle::Move();}
+};
+
+class Bus : public Vehicle
+{
+	public:
+		void Move(){ cout << "baxbaxbax....";}
+		void Stop(){ cout<< "Stop bus...";}
+};
+
+class SportCar : public Car
+{
+	public:
+		void Stop(){ cout<< "Stop sportcar...";}
+};
+
+class Wagon : public Car
+{
+	public:
+		void Stop(){ cout<< "Stop wagon....";}
+};
+
+class Coupe : public Car
+{
+	public:
+		void Stop(){ cout<< "Stop coupe...";}
+};
 
 int main(void)
 {
-	_747 pr;
+	SportCar car;
+	Wagon car1;
+	Coupe car2;
+
 	return 0;
 }
