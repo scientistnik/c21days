@@ -1,4 +1,18 @@
 #include <iostream>
+#include <list>
+#include <string>
+
+using namespace std;
+
+class Student
+{
+	public:
+		string GetName() const { return name;}
+		int GetAge() const { return age;}
+	private:
+		string name;
+		int age;
+};
 
 class List
 {
@@ -61,11 +75,21 @@ void ListTemplate<T>::swap(ListTemplate<T>& one, ListTemplate<T>& two)
 	one = two;
 	two = three;
 }
+
 int main(void)
 {
 	List A;
 	ListTemplate<int> B;
 	ListTemplate<List> C;
+
+	list<Student> Studen;
+	for(int i=0; i< 10; i++)
+	{
+		Student *buf = new Student;
+		Studen.push_back(*buf);
+	}
+	
+
 	return 0;
 }
 		
